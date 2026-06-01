@@ -3,10 +3,9 @@ let authRoutes = require('./routes/auth.routes.js');
 
 let app = express();
 
-// Parse JSON first
 app.use(express.json());
 
-// Then routes
+
 app.use('/api/auth', authRoutes);
 
 // Global error handler
