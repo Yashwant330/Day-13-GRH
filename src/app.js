@@ -10,7 +10,9 @@ app.use('/api/auth', authRoutes);
 
 // Global error handler
 app.use((err, req, res, next) => {
-   res.status(500).send("I am father of errors");
+   res.status(500).json({
+    message:err.message,
+   })
 });
 
 module.exports = app;
